@@ -180,7 +180,7 @@ app.post("/sendApplication", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.delete("/removeOffer/:id", (req, res) => {
+app.delete("/removeOffer/id", (req, res) => {
   console.log(req.params);
   dbModel.findByIdAndDelete({ _id: req.params.id })
     .then((doc) => console.log(doc))
